@@ -53,17 +53,11 @@
         flex-wrap: wrap;
         width: 99%;
 
-        &.multilingual {
-            .accent-wrap {
-                border-bottom: 2px solid rgba(230, 229, 227, 0.6);
-                margin-bottom: 2rem;
-                &:last-child {
-                    border-bottom: 0;
-                }
-            }
-        }
-
-        .accent-wrap {
+        .language-wrap {
+            border: 2px solid rgba(230, 229, 227, 0.6);
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 2rem;
             display: block;
             width: 100%;
             position: relative;
