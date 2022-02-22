@@ -1,0 +1,105 @@
+.languages-request-page {
+    position: relative;
+
+    /* wave at bottom of page */
+    background-image: url('./images/background-wave.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: bottom right;
+
+    /* TODO: generic text should be like <TextContent> or something? */
+    h1,
+    p,
+    ul {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        margin-left: 2em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    h1 {
+        position: relative;
+        padding-top: 0.5em;
+        margin-top: 1em;
+        font-weight: 500;
+        font-size: 2.5em;
+        line-height: 1.15em;
+
+        /* little decorative line */
+        &::before {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            left: 0;
+            top: 0;
+            background: linear-gradient(90deg, #f89096 0%, #b1b5e5 100%);
+        }
+    }
+}
+
+.languages-request-page--success {
+    /* wave at bottom of page */
+    background-image: url('./images/background-wave-success.svg');
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.languages-request-page-wrapper {
+    padding: var(--page-margin);
+    margin: 0 auto;
+    max-width: var(--desktop-width);
+
+    @media (--md-up) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.languages-request-page__content {
+    max-width: 35em;
+}
+
+.languages-request-page__image {
+    @media (--md-up) {
+        padding-left: 2em;
+        padding-top: 10vh;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.languages-request-page__content__form {
+    padding: 1em 0;
+    margin-bottom: 3em;
+
+    .labeled-form-control,
+    .labeled-checkbox {
+        margin: 2em 0;
+    }
+}
+
+.languages-request-page__content__form--changed {
+    .labeled-form-control input:not(:focus):invalid,
+    .labeled-form-control textarea:not(:focus):invalid {
+        color: red;
+        border-color: red;
+    }
+}
+
+.languages-request-page__content__form__required {
+    font-size: 0.85em;
+}

@@ -7,7 +7,13 @@ import { Spinner } from '../ui/ui';
 import { LoginFailure, LoginSuccess } from '../pages/login';
 const HomePage = React.lazy(() => import('../pages/home/home'));
 const DatasetsPage = React.lazy(() => import('../pages/datasets/datasets'));
-const LanguagesPages = React.lazy(() => import('../pages/languages/languages'));
+const LanguagesPage = React.lazy(() => import('../pages/languages/languages'));
+const LanguagesRequestPage = React.lazy(() => {
+  return import('../pages/languages/request/request');
+});
+const LanguagesRequestSuccessPage = React.lazy(() => {
+  return import('../pages/languages/request/request-success');
+});
 const DashboardPage = React.lazy(() => import('../pages/dashboard/dashboard'));
 const ProfileLayoutPage = React.lazy(() => import('../pages/profile/layout'));
 const FAQPage = React.lazy(() => import('../pages/faq/faq'));
@@ -42,7 +48,17 @@ export default function Content({ location }: { location: any }) {
           <Route
             exact
             path={toLocaleRoute(URLS.LANGUAGES)}
-            component={LanguagesPages}
+            component={LanguagesPage}
+          />
+          <Route
+            exact
+            path={toLocaleRoute(URLS.LANGUAGES_REQUEST)}
+            component={LanguagesRequestPage}
+          />
+          <Route
+            exact
+            path={toLocaleRoute(URLS.LANGUAGES_REQUEST_SUCCESS)}
+            component={LanguagesRequestSuccessPage}
           />
           <Route
             exact
