@@ -11,7 +11,7 @@ email-opt-in-info = I'd like to receive emails such as goal reminders, my progre
 email-opt-in-info-title = Join the Common Voice mailing list
 email-opt-in-info-sub-with-challenge = Receive emails such as challenge and goal reminders, progress updates, and newsletters about Common Voice.
 email-opt-in-privacy-v2 = By opting in to receive emails you state that you are okay with Mozilla handling this info as explained in Mozilla’s <privacyLink>Privacy Policy</privacyLink>.
-indicates-required = * Indicates required field
+indicates-required = Fields marked with an asterisk (*) are required.
 not-available-abbreviation = N/A
 
 # Don't rename the following section, its contents are auto-inserted based on the name (see scripts/pontoon-languages-to-ftl.js)
