@@ -5,7 +5,7 @@ import {
 } from '@fluent/react';
 import * as React from 'react';
 import { connect } from 'react-redux';
-const { Tooltip } = require('react-tippy');
+import { Tooltip } from 'react-tippy';
 import { Flags } from '../../../stores/flags';
 import { Locale } from '../../../stores/locale';
 import StateTree from '../../../stores/tree';
@@ -251,14 +251,8 @@ class ContributionPage extends React.Component<Props, State> {
   };
 
   private handleKeyDown = (event: any) => {
-    const {
-      getString,
-      isSubmitted,
-      locale,
-      onReset,
-      onSubmit,
-      type,
-    } = this.props;
+    const { getString, isSubmitted, locale, onReset, onSubmit, type } =
+      this.props;
 
     if (
       event.ctrlKey ||

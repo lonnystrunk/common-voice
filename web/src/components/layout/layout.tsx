@@ -142,7 +142,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
   };
 
   async componentDidMount() {
-    const { locale, api, user } = this.props;
+    const { locale } = this.props;
     window.addEventListener('scroll', this.handleScroll);
     this.visitHash();
 
@@ -158,7 +158,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
     });
   }
 
-  componentDidUpdate(nextProps: LayoutProps, nextState: LayoutState) {
+  componentDidUpdate(nextProps: LayoutProps) {
     if (this.props.location.pathname !== nextProps.location.pathname) {
       this.setState({ isMenuVisible: false });
 
@@ -245,7 +245,6 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
       isMenuVisible,
       showStagingBanner,
       showWelcomeModal,
-      featureStorageKey,
     } = this.state;
     const isBuildingProfile = location.pathname.includes(URLS.PROFILE_INFO);
 
@@ -304,9 +303,9 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
         </header>
         {showStagingBanner && (
           <div className="staging-banner">
-            You're on the staging server. Voice data is not collected here.{' '}
+            You&apos;re on the staging server. Voice data is not collected here.{' '}
             <a href={URLS.HTTP_ROOT} target="_blank" rel="noopener noreferrer">
-              Don't waste your breath.
+              Don&apos;t waste your breath.
             </a>{' '}
             <a
               href={`${URLS.GITHUB_ROOT}/issues/new`}
