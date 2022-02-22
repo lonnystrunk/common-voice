@@ -9,10 +9,6 @@
             var(--desert-storm)
         );
     }
-
-    & #content {
-        padding: 0;
-    }
 }
 
 .dashboard {
@@ -22,7 +18,6 @@
     & .inner,
     & .top-bar {
         max-width: var(--wide-desktop-width);
-        box-sizing: border-box;
     }
 
     & .inner {
@@ -200,7 +195,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 15px;
-    box-sizing: border-box;
+
     margin: 0 10px;
 
     img {

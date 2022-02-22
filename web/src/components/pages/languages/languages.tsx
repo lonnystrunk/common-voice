@@ -238,7 +238,7 @@ class LanguagesPage extends React.PureComponent<Props, State> {
     );
 
     return (
-      <div className={'selected-' + selectedSection}>
+      <div className={'languages-page selected-' + selectedSection}>
         <br />
 
         <div className="top">

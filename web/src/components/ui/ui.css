@@ -23,7 +23,7 @@
 
 .button {
     position: relative;
-    box-sizing: border-box;
+
     padding: 0.5rem 1rem;
     min-width: 14rem;
     height: 3rem;
@@ -140,7 +140,6 @@ button.card-action:focus.focus-visible path {
     border-radius: 2px;
     width: 15px;
     height: 15px;
-    box-sizing: border-box;
 
     &:focus-within {
         border-width: 3px;
@@ -192,7 +191,6 @@ button.card-action:focus.focus-visible path {
     position: relative;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 
     & :required,
     & :valid {
@@ -213,7 +211,6 @@ button.card-action:focus.focus-visible path {
     & input,
     & select,
     & textarea {
-        box-sizing: border-box;
         border: 1.6px solid #e6e4e1;
         border-radius: 2px;
         padding: 13px;
@@ -274,7 +271,6 @@ button.card-action:focus.focus-visible path {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
 
     & span {
         border-radius: 50%;
@@ -301,7 +297,6 @@ button.card-action:focus.focus-visible path {
 }
 
 .toggle-input {
-    box-sizing: border-box;
     border-radius: 25px;
     padding: 0 var(--toggle-padding);
     width: min-content;

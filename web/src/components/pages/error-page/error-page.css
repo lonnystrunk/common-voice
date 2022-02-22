@@ -142,10 +142,6 @@
     #help-links {
         display: none;
     }
-
-    footer {
-        margin-top: 0;
-    }
 }
 
 @keyframes error-page-bob {

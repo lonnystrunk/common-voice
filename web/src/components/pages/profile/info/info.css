@@ -54,7 +54,6 @@
         width: 99%;
 
         label {
-            box-sizing: border-box;
             margin-bottom: 30px;
             flex: 1 0 34%;
 
@@ -92,7 +91,6 @@
             flex-direction: row;
 
             & > * {
-                box-sizing: border-box;
                 width: 50%;
 
                 &:nth-child(2n + 1) {

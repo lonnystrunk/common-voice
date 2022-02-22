@@ -72,7 +72,7 @@
             padding-inline-start: calc(
                 (100vw - var(--desktop-width)) / 2 + var(--page-margin)
             );
-            box-sizing: border-box;
+
             background: url('images/intro-bg.png');
             background-size: 100% 100%;
 
@@ -392,7 +392,7 @@
     padding: 0 1rem;
     margin: 0 auto;
     display: flex;
-    box-sizing: border-box;
+
     flex-direction: column;
 
     @media (--lg-up) {
@@ -599,7 +599,7 @@
             order: 1;
             width: 50%;
             padding-inline-end: 1rem;
-            box-sizing: border-box;
+
             font-size: 14px;
         }
 
