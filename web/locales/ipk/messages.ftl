@@ -80,7 +80,6 @@ ia = Interlingua
 id = Indonesian
 ie = Interlingue
 ig = Igbo
-ipk = Inupiaq
 is = Icelandic
 it = Italian
 izh = Izhorian

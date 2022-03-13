@@ -110,6 +110,9 @@ export const up = async function (db: any): Promise<any> {
     return obj;
   }, {});
   for (const row of VARIANTS) {
+    if (mappedLanguages[row['locale_name']] === undefined) {
+      continue;
+    }
     await db.runSql(
       `INSERT INTO variants (locale_id, variant_token, variant_name) VALUES ( ${
         mappedLanguages[row['locale_name']] +

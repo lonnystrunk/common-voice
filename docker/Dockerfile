@@ -27,6 +27,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y yarn ffmpeg
 
 ENV GIT_COMMIT_SHA=${COMMIT}
+ENV NODE_OPTIONS=--max-old-space-size=1024
 
 # Install yarn dependencies
 RUN yarn
@@ -35,4 +36,4 @@ RUN yarn
 RUN yarn build
 
 # Default command to start the server
-CMD yarn start 2>&1 | tee /code/logs/voice-server.log
+CMD yarn start:prod 2>&1 | tee /code/logs/voice-server.log

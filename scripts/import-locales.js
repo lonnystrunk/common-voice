@@ -4,7 +4,7 @@ const { parse } = require('@fluent/syntax');
 const request = require('request-promise-native');
 
 const TRANSLATED_MIN_PROGRESS = 0.75;
-const CONTRIBUTABLE_MIN_SENTENCES = 5000;
+const CONTRIBUTABLE_MIN_SENTENCES = 1; //5000;
 
 const dataPath = path.join(__dirname, '..', 'locales');
 const localeMessagesPath = path.join(__dirname, '..', 'web', 'locales');
@@ -30,6 +30,7 @@ async function fetchPontoonLanguages() {
       translated: approvedStrings / totalStrings,
     }))
     .concat({ code: 'en', name: 'English', translated: 1, direction: 'LTR' })
+    .concat({ code: 'ipk', name: 'Inupiaq', translated: 1, direction: 'LTR' })
     .sort((l1, l2) => l1.code.localeCompare(l2.code));
 }
 
