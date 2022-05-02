@@ -35,3 +35,41 @@ $ mysql -u voicecommons -p
 > SHOW TABLES;
 > SELECT * from clips;
 ```
+
+# Getting recording data from MySQL database
+
+## On Droplet - ssh
+
+```
+$ cd /opt/common-voice/
+$ docker exec db /usr/bin/mysqldump -u root voiceweb > backup.sql
+```
+
+## Locally
+
+Using locally brew-installed MySQL server.
+
+```
+$ brew services start mysql 
+$ scp -r yugtun@167.172.122.80:/opt/common-voice/backup.sql .
+$ mysql -u root voiceweb < backup-20220414.sql
+$ echo "SELECT path,sentence FROM clips;" | mysql -u root voiceweb > savedClips.tsv
+$ cat savedClips.tsv
+$ brew services stop mysql
+```
+
+# Update Sentences on Droplet - ssh
+
+Website: https://app.yugtun.com/ipk/speak
+
+```
+$ cd /opt/common-voice/server/data/ipk/
+$ vim ipk-examples.txt
+$ docker-compose down
+$ docker-compose up -d      
+```
+
+monitor with:
+```
+$ docker logs -f web
+```
